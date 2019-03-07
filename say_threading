@@ -1,0 +1,10 @@
+#!/usr/bin/python
+#coding:utf-8
+from threading import Thread
+def foo(i):
+    print "say hi",i
+
+if __name__=="__main__":
+    for i in range(10001):
+        t=Thread(target=foo,args=(i,))
+        t.start()
