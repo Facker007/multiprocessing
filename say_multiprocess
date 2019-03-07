@@ -1,0 +1,10 @@
+#!/usr/bin/python
+#coding:utf-8
+from multiprocessing import Process
+def foo(i):
+        print 'say hi',i
+
+if __name__=="__main__":
+    for i in range(10001):
+        p=Process(target=foo,args=(i,))
+        p.start()
